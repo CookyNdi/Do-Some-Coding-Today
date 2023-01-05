@@ -1,0 +1,397 @@
+:root {
+  --primaryColor: #4788C7;
+  --secondaryColor: #98CCFD;
+  --bgColor: #DFF0FE;
+  --bgColor2: rgba(71, 136, 199, .8);
+  --textColor: #111;
+  --textColor2: #f1f1f1;
+}
+
+
+/* Navigationbar */
+
+nav {
+  background: var(--primaryColor);
+  width: 100%;
+  height: auto;
+  position: fixed;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 150px;
+}
+
+.logo span {
+  font-size: 30px;
+  color: var(--textColor);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--textColor2);
+  cursor: pointer;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  margin-left: 20px;
+  list-style-type: none;
+}
+
+.nav ul li a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: var(--textColor2);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: .3s ease-in-out;
+}
+
+.nav ul li a:hover {
+  color: var(--textColor);
+  transition: .3s ease-in-out;
+}
+
+@media only screen and (max-width: 1037px) {
+  .nav {
+    margin: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 937px) {
+  .nav {
+    margin: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav {
+    margin: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .nav {
+    margin: 0 20px;
+  }
+}
+
+/* content */
+
+.ContainerContent {
+  background: var(--bgColor);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.MonthName {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.RowsContent {
+  padding-top: 50px;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ColContent {
+  padding: 10px;
+  width: 32%;
+  height: 300px;
+  background: var(--secondaryColor);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 1037px) {
+  .RowsContent {
+    width: 970px;
+  }
+
+  .ColContent {
+    width: 32%;
+    height: 240px;
+  }
+}
+
+@media only screen and (max-width: 937px) {
+  .RowsContent {
+    width: 820px;
+  }
+
+  .ColContent {
+    width: 31%;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .RowsContent {
+    width: 720px;
+  }
+
+  .ColContent {
+    width: 30%;
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 657px) {
+  .RowsContent {
+    width: 740px;
+  }
+
+  .ColContent {
+    width: 45%;
+    height: 190px;
+  }
+}
+
+@media only screen and (max-width: 579px) {
+  .ColContent {
+    width: 90%;
+    height: 330px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .ColContent {
+    width: 90%;
+    height: 310px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .ColContent {
+    width: 100%;
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  .ColContent {
+    width: 100%;
+    height: 260px;
+  }
+}
+
+/* Day */
+
+.ContainerDay {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.ContainerDay .Screenshot {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.ContainerDay .Screenshot img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.ContainerDay .Tittle {
+  width: 100%;
+  height: 80px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bgColor2);
+}
+
+.ContainerDay .Tittle h2 {
+  font-size: 20px;
+  margin-top: 5px;
+  color: var(--textColor2);
+}
+
+@media only screen and (max-width: 1037px) {
+  .ContainerDay .Screenshot {
+    height: 165px;
+  }
+
+  .ContainerDay .Screenshot img {
+    height: 165px;
+  }
+
+  .ContainerDay .Tittle {
+    height: 55px;
+  }
+
+  .ContainerDay .Tittle h2 {
+    margin-top: 3px;
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 937px) {
+  .ContainerDay .Screenshot {
+    height: 135px;
+  }
+
+  .ContainerDay .Screenshot img {
+    height: 135px;
+  }
+
+  .ContainerDay .Tittle {
+    height: 45px;
+  }
+
+  .ContainerDay .Tittle h2 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ContainerDay .Screenshot {
+    height: 110px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .ContainerDay .Screenshot img {
+    height: 110px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .ContainerDay .Tittle {
+    height: 40px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .ContainerDay .Tittle h2 {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 657px) {
+  .ContainerDay .Screenshot {
+    height: 125px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .ContainerDay .Screenshot img {
+    height: 125px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .ContainerDay .Tittle {
+    height: 47px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .ContainerDay .Tittle h2 {
+    margin-top: 2px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 579px) {
+  .ContainerDay .Screenshot {
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .ContainerDay .Screenshot img {
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .ContainerDay .Tittle {
+    height: 70px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .ContainerDay .Tittle h2 {
+    margin-top: 2px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .ContainerDay .Screenshot {
+    height: 220px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .ContainerDay .Screenshot img {
+    height: 220px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .ContainerDay .Tittle {
+    height: 70px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .ContainerDay .Tittle h2 {
+    margin-top: 4px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .ContainerDay .Screenshot {
+    height: 190px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .ContainerDay .Screenshot img {
+    height: 190px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .ContainerDay .Tittle {
+    height: 70px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .ContainerDay .Tittle h2 {
+    margin-top: 2px;
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  .ContainerDay .Screenshot {
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .ContainerDay .Screenshot img {
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .ContainerDay .Tittle {
+    height: 60px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .ContainerDay .Tittle h2 {
+    margin-top: 2px;
+    font-size: 16px;
+  }
+}
