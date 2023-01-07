@@ -1,5 +1,5 @@
 import React from "react";
-import Screenshot from "../../asset/coming.webp";
+import Screenshot from "../../asset/1-7.webp";
 
 const Jan7 = () => {
   return (
@@ -8,7 +8,7 @@ const Jan7 = () => {
         <img src={Screenshot} alt="7-1-2023" />
       </div>
       <div className="Tittle">
-        <h2>Not Coming</h2>
+        <h2>Membuat Login Form #2</h2>
       </div>
     </div>
   );
