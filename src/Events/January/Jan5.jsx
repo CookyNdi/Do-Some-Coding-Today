@@ -8,7 +8,7 @@ const Jan5 = () => {
         <img src={Screenshot} alt="5-1-2023" />
       </div>
       <div className="Tittle">
-        <h2>Membuat Website DSCT Part 2</h2>
+        <h2>Membuat Website DSCT #2</h2>
       </div>
     </div>
   );
