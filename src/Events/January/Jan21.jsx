@@ -1,5 +1,5 @@
 import React from "react";
-import Screenshot from "../../asset/coming.webp";
+import Screenshot from "../../asset/1-21.webp";
 
 const Jan21 = () => {
   return (
@@ -8,7 +8,7 @@ const Jan21 = () => {
         <img src={Screenshot} alt="21-1-2023" />
       </div>
       <div className="Tittle">
-        <h2>Not Coming</h2>
+        <h2>DSCT: Membuat Media Query Untuk Home Page #10</h2>
       </div>
     </div>
   );
