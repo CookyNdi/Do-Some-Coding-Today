@@ -1,54 +1,31 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaUserAlt } from "react-icons/fa";
-import { AiFillTag, AiOutlineCalendar } from "react-icons/ai";
 
-const NavigationBar = () => {
-  const Navigate = useNavigate();
+const Navigationbar = () => {
+  const navigate = useNavigate();
 
-  const Month = () => {
-    Navigate("/month");
-  };
   const Home = () => {
-    Navigate("/");
+    navigate("/");
   };
-  // const Tag = () => {
-  //   Navigate("/tag");
-  // };
-  const Me = () => {
-    Navigate("/about-me");
-  };
-
   return (
     <div>
       <nav>
-        <section className="navContainer">
-          <div className="navLeft">
-            <h1 onClick={Home}>DSCT</h1>
-            <div className="navComponent">
-              <ul>
-                <li title="Month" onClick={Month} style={{ cursor: "pointer" }}>
-                  <AiOutlineCalendar className="iconNav" />
-                  Month
-                </li>
-                <li title="Tag Soon" className="disable">
-                  <AiFillTag className="iconNav" />
-                  Tag
-                </li>
-                <li title="About Me" onClick={Me} style={{ cursor: "pointer" }}>
-                  <FaUserAlt className="iconNav iconNavUser" />
-                  About Me
-                </li>
-              </ul>
-            </div>
+        <section className="nav">
+          <div className="logo">
+            <span onClick={Home}>DSCT</span>
           </div>
-          <div className="navRight">
-            <img src="https://img.icons8.com/color/96/000000/indonesia.png" alt="id" />
-          </div>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/">Month</a>
+            </li>
+          </ul>
         </section>
       </nav>
     </div>
   );
 };
 
-export default NavigationBar;
+export default Navigationbar;
