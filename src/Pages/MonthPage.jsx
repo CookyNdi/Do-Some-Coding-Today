@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationBar from "../components/Navigationbar";
+import NavigationBar from "../components/NavigationBar";
 import BodyMonth from "../components/BodyMonth";
 
 const MonthPage = () => {

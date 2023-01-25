@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationBar from "../components/Navigationbar";
+import NavigationBar from "../components/NavigationBar";
 import BodyDay from "../components/BodyDay";
 
 const DayPage = () => {
