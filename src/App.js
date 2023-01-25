@@ -2,9 +2,9 @@ import "./Styles/Style.css";
 import "./Styles/DayStyle.css";
 import "./Styles/Month.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-import DayPage from "./Pages/DayPage";
-import MonthPage from "./Pages/MonthPage";
+import HomePage from "./pages/HomePage";
+import DayPage from "./pages/DayPage";
+import MonthPage from "./pages/MonthPage";
 
 function App() {
   return (
