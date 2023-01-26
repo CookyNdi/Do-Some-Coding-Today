@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import spiner from "../asset/spiner.gif";
 
 const Body = () => {
   const sheetId = "10r-IFwefCFvFDGDc1cSVHwq-P9-RnJ63Vgr2aHoxKw4";
@@ -15,7 +16,7 @@ const Body = () => {
   useEffect(() => {
     document.title = `Do Some Coding Today | Home`;
     db();
-  },[]);
+  }, []);
 
   const db = () => {
     fetch(url)
@@ -96,24 +97,6 @@ const Body = () => {
       let setGridReload = document.getElementById("setGrid");
       setGridReload.classList.add("gridFour");
     }
-  }
-
-  console.debug(setGrid);
-
-  if (
-    localStorage.getItem("gridTwo") &&
-    localStorage.getItem("gridThree") &&
-    localStorage.getItem("gridFour") !== undefined
-  ) {
-    window.onload = localStorage.setItem("gridThree", "Active");
-  }
-
-  if (
-    localStorage.getItem("gridTwo") &&
-    localStorage.getItem("gridThree") &&
-    localStorage.getItem("gridFour") !== null
-  ) {
-    window.onload = localStorage.setItem("gridThree", "Active");
   }
 
   return (

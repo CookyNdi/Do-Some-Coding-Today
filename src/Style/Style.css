@@ -12,105 +12,6 @@
   --Color11: #252732;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--Color2);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--Color3);
-  border-radius: 10px;
-}
-
-nav {
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  background-color: var(--Color6);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  z-index: 9999;
-  overflow: hidden;
-}
-
-.navContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 40px;
-}
-
-.navContainer .NavScroll {
-  background: #ffffff;
-}
-
-.navLeft {
-  display: flex;
-  align-items: center;
-}
-
-.navLeft h1 {
-  color: var(--Color4);
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.navLeft ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--Color2);
-  width: 340px;
-  height: 60px;
-  margin-left: 20px;
-  border-radius: 0 0 20px 20px;
-}
-
-.navLeft ul li {
-  height: auto;
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  margin: 0 10px;
-  color: var(--Color3);
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.disable {
-  text-decoration: line-through;
-  cursor: default;
-}
-
-.iconNav {
-  margin-right: 5px;
-}
-
-.iconNavUser {
-  font-size: 16px;
-}
-
-.navRight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navRight img {
-  visibility: hidden;
-  width: 45px;
-  cursor: pointer;
-}
-
-
-
 .bodyContent {
   width: 100%;
   height: auto;
@@ -133,9 +34,10 @@ nav {
 }
 
 .gridSet {
-  width: 130px;
+  width: auto;
   height: 100%;
   border-radius: 5px;
+  padding: 15px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,59 +75,42 @@ nav {
   margin-top: 10px;
   width: 100%;
   height: auto;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
   transition: .3s;
 }
 
-.gridTwo {
-  transition: .3s;
-  grid-template-columns: 633px 633px;
-  grid-template-rows: 365px 365px 365px 365px 365px 365px 365px 365px 365px 365px;
-}
-
-.gridThree {
-  transition: .3s;
-  grid-template-columns: 422px 422px 422px;
-  grid-template-rows: 330px 330px 330px 330px 330px 330px 330px 330px 330px 330px;
-}
-
-.gridFour {
-  transition: .3s;
-  grid-template-columns: 316px 316px 316px 316px;
-  grid-template-rows: 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px;
+.Card {
+  background-color: var(--Color2);
+  width: 32.9%;
+  height: 270px;
+  border-radius: 10px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid var(--Color11);
 }
 
 .gridTwo .Card {
-  background-color: var(--Color2);
-  border-radius: 10px;
-  transition: .3s ease-in-out;
-  cursor: pointer;
-  text-decoration: none;
-  border: 1px solid var(--Color11);
+  width: 49.6%;
+  height: 370px;
 }
 
 .gridThree .Card {
-  background-color: var(--Color2);
-  border-radius: 10px;
-  transition: .3s ease-in-out;
-  cursor: pointer;
-  text-decoration: none;
-  border: 1px solid var(--Color11);
+  width: 32.9%;
+  height: 270px;
 }
 
 .gridFour .Card {
-  background-color: var(--Color2);
-  border-radius: 5px;
-  transition: .3s ease-in-out;
-  cursor: pointer;
-  text-decoration: none;
-  border: 1px solid var(--Color11);
+  width: 24.4%;
+  height: 240px;
+  border-radius: 6px;
 }
 
 .Card:hover {
   transform: scale(1.1);
-  /* transform-origin: left; */
   transition: .3s ease-in-out;
   transition-delay: .5s;
   z-index: 10;
@@ -254,60 +139,39 @@ nav {
   color: var(--Color5);
 }
 
-/* .dayCard {
-  position: absolute;
-  width: 145px;
-  height: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--Color2);
-  rotate: 45deg;
-  top: 25px;
-  right: -35px;
-  color: var(--Color5);
-  font-size: 15px;
-  box-shadow: 0px 0px 8px 1px var(--Color7);
-} */
-
-
-.gridTwo .CardImages {
+.CardImages {
   width: 100%;
-  height: 75%;
+  height: 70%;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
 
-.gridTwo .CardImages img {
+.CardImages img {
   width: 100%;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
+}
+
+.gridTwo .CardImages {
+  height: 77%;
 }
 
 .gridThree .CardImages {
-  width: 100%;
-  height: 70%;
-  border-radius: 10px 10px 0 0;
-  overflow: hidden;
+  height: 71%;
+  border-radius: 8px 8px 0 0;
 }
 
 .gridThree .CardImages img {
-  width: 100%;
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
 .gridFour .CardImages {
-  width: 100%;
   height: 70%;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
+  border-radius: 6px 6px 0 0;
 }
 
 .gridFour .CardImages img {
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-  object-fit: cover;
+  border-radius: 6px 6px 0 0;
 }
 
 .CardTitle {
@@ -316,24 +180,6 @@ nav {
   display: flex;
   flex-direction: column;
   border-radius: 0 0 5px 5px;
-}
-
-.gridThree .CardText {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-  border-bottom: 1px solid var(--Color3);
-  margin-bottom: 3px;
-}
-
-.gridFour .CardText {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-  border-bottom: 1px solid var(--Color3);
-  margin-bottom: 3px;
 }
 
 .CardText {
@@ -345,40 +191,19 @@ nav {
   margin-bottom: 5px;
 }
 
-.gridThree .CardText h2 {
-  text-transform: capitalize;
-  color: var(--Color5);
-  font-size: 20px;
-  margin-top: 0px;
-  display: inline-block;
-  /* width: 350px; */
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.gridFour .CardText h2 {
-  text-transform: capitalize;
-  color: var(--Color5);
-  font-size: 18px;
-  margin-top: 0px;
-  display: inline-block;
-  /* width: 350px; */
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .CardText h2 {
   text-transform: capitalize;
   color: var(--Color5);
   font-size: 20px;
   margin-top: 3px;
   display: inline-block;
-  /* width: 350px; */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.gridFour .CardText h2 {
+  font-size: 18px;
 }
 
 .CardTag {
@@ -389,38 +214,12 @@ nav {
   flex-wrap: wrap;
 }
 
-.gridTwo .CardTag button {
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  padding: 4px 8px;
-  font-size: 15px;
-  font-weight: 600;
-  margin: 5px 6px;
-  background-color: var(--Color8);
-  color: var(--Color10);
-  cursor: pointer;
-}
-
-.gridThree .CardTag button {
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  padding: 2px 6px;
-  font-size: 14px;
-  font-weight: 600;
-  margin: 3px 4px;
-  background-color: var(--Color8);
-  color: var(--Color10);
-  cursor: pointer;
-}
-
-.gridFour .CardTag button {
+.CardTag button {
   border: none;
   outline: none;
   border-radius: 5px;
   padding: 1px 5px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   margin: 8px 3px;
   background-color: var(--Color8);
@@ -428,727 +227,498 @@ nav {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 2560px) {
-  .topContent {
-    font-size: 24px;
-  }
-
-  .dayCard {
-    height: 45px;
-    font-size: 26px;
-    border-radius: 5px;
-    margin: 8px 8px 0 0;
-    padding: 15px 17px;
-  }
-
-  .gridTwo {
-    grid-template-columns: 1230px 1230px;
-    grid-template-rows: 650px 650px 650px 650px 650px 650px 650px 650px 650px 650px;
-  }
-
-  .gridThree {
-    grid-template-columns: 817px 817px 817px;
-    grid-template-rows: 510px 510px 510px 510px 510px 510px 510px 510px 510px 510px;
-  }
-
-  .gridFour {
-    grid-template-columns: 611px 611px 611px 611px;
-    grid-template-rows: 435px 435px 435px 435px 435px 435px 435px 435px 435px 435px;
-  }
-
-  .gridTwo .CardImages {
-    height: 79%;
-    border-radius: 6px 6px 0 0;
-  }
-
-  .gridTwo .CardImages img {
-    border-radius: 6px 6px 0 0;
-  }
-
-  .gridThree .CardImages {
-    height: 77%;
-    border-radius: 6px 6px 0 0;
-  }
-
-  .gridThree .CardImages img {
-    border-radius: 6px 6px 0 0;
-  }
-
-  .gridFour .CardImages {
-    height: 77%;
-    border-radius: 5px 5px 0 0;
-  }
-
-  .CardTitle {
-    height: 23%;
-  }
-
-  .gridTwo .CardText h2 {
-    font-size: 38px;
-  }
-
-  .gridThree .CardText h2 {
-    font-size: 30px;
-  }
-
-  .gridFour .CardText h2 {
-    font-size: 28px;
-    padding: 0 25px;
-  }
-
-  .gridTwo .CardTag button {
-    padding: 3px 8px;
-    font-size: 28px;
-    margin: 10px 5px 2px 5px;
-  }
-
-  .gridThree .CardTag button {
-    padding: 3px 8px;
-    font-size: 22px;
-    margin: 10px 3px 2px 3px;
-  }
-
-  .gridFour .CardTag button {
-    padding: 3px 8px;
-    font-size: 20px;
-    margin: 3px 3px 20px 3px;
-  }
+.gridThree .CardTag button {
+  font-size: 14px;
 }
 
-@media only screen and (max-width: 1440px) {
-  .topContent {
-    font-size: 20px;
-  }
+.gridFour .CardTag button {
+  font-size: 12px;
+}
 
-  .dayCard {
-    height: 25px;
-    font-size: 17px;
-    border-radius: 5px;
-    margin: 5px 5px 0 0;
-    padding: 6px 8px;
-  }
-
-  .gridTwo {
-    grid-template-columns: 672px 672px;
-    grid-template-rows: 360px 360px 360px 360px 360px 360px 360px 360px 360px 360px;
-  }
-
-  .gridThree {
-    grid-template-columns: 444px 444px 444px;
-    grid-template-rows: 320px 320px 320px 320px 320px 320px 320px 320px 320px 320px;
-  }
-
-  .gridFour {
-    grid-template-columns: 331px 331px 331px 331px;
-    grid-template-rows: 240px 240px 240px 240px 240px 240px 240px 240px 240px 240px;
+@media only screen and (max-width: 1099px) {
+  .gridTwo .Card {
+    width: 49.6%;
+    height: 320px;
   }
 
   .gridThree .Card {
-    border-radius: 8px;
-  }
-
-  .gridThre .Card {
-    border-radius: 8px;
+    width: 32.6%;
+    height: 240px;
   }
 
   .gridFour .Card {
-    border-radius: 8px;
+    width: 24.4%;
+    height: 180px;
+    border-radius: 6px;
   }
 
   .gridTwo .CardImages {
-    height: 78%;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .gridTwo .CardImages img {
-    border-radius: 8px 8px 0 0;
-  }
-
-  .gridThree .CardImages {
-    height: 76%;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .gridThree .CardImages img {
-    border-radius: 8px 8px 0 0;
-  }
-
-  .gridFour .CardImages {
     height: 74%;
-    border-radius: 5px 5px 0 0;
+    border-radius: 8px 8px 0 0;
   }
 
-  .CardTitle {
-    height: 25%;
+  .gridTwo .CardImages img {
+    border-radius: 8px 8px 0 0;
   }
 
-  .gridTwo .CardText h2 {
-    font-size: 20px;
+  .gridThree .CardImages {
+    height: 70%;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .gridThree .CardImages img {
+    border-radius: 6px 6px 0 0;
   }
 
   .gridThree .CardText h2 {
-    font-size: 18px;
-  }
-
-  .gridFour .CardText h2 {
     font-size: 16px;
-  }
-
-  .gridTwo .CardTag button {
-    font-size: 14px;
-    margin: 3px 3px 10px 3px;
-  }
-
-  .gridThree .CardTag button {
-    font-size: 13px;
-  }
-
-  .gridFour .CardTag button {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 1366px) {
-  .topContent {
-    font-size: 18px;
-  }
-
-  .dayCard {
-    height: 25px;
-    font-size: 16px;
-    border-radius: 5px;
-    margin: 5px 5px 0 0;
-    padding: 6px 8px;
-  }
-
-  .gridTwo {
-    grid-template-columns: 634px 634px;
-    grid-template-rows: 365px 365px 365px 365px 365px 365px 365px 365px 365px 365px 365px 365px 365px 365px 365px 365px;
-  }
-
-  .gridThree {
-    grid-template-columns: 420px 420px 420px;
-    grid-template-rows: 315px 315px 315px 315px 315px 315px 315px 315px 315px 315px 315px;
-  }
-
-  .gridFour {
-    grid-template-columns: 313px 313px 313px 313px;
-    grid-template-rows: 235px 235px 235px 235px 235px 235px 235px 235px;
-  }
-
-  .gridThree .Card {
-    border-radius: 8px;
-  }
-
-  .gridThre .Card {
-    border-radius: 8px;
-  }
-
-  .gridFour .Card {
-    border-radius: 8px;
-  }
-
-  .gridTwo .CardImages {
-    height: 78%;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .gridTwo .CardImages img {
-    border-radius: 8px 8px 0 0;
-  }
-
-  .gridThree .CardImages {
-    height: 76%;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .gridThree .CardImages img {
-    border-radius: 8px 8px 0 0;
-  }
-
-  .gridFour .CardImages {
-    height: 74%;
-    border-radius: 5px 5px 0 0;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .gridTwo {
-    grid-template-columns: 591px 591px;
-    grid-template-rows: 345px 345px 345px 345px 345px 345px 345px 345px 345px 345px;
-  }
-
-  .gridThree {
-    grid-template-columns: 391px 391px 391px;
-    grid-template-rows: 295px 295px 295px 295px 295px 295px 295px 295px 295px 295px;
-  }
-
-  .gridFour {
-    grid-template-columns: 291px 291px 291px 291px;
-    grid-template-rows: 230px 230px 230px 230px 230px 230px 230px 230px 230px 230px;
-  }
-
-  .gridThree .Card {
-    border-radius: 6px;
-  }
-
-  .gridThre .Card {
-    border-radius: 6px;
-  }
-
-  .gridFour .Card {
-    border-radius: 6px;
-  }
-
-  .gridTwo .CardImages {
-    height: 78%;
-    border-radius: 6px 6px 0 0;
-  }
-
-  .gridTwo .CardImages img {
-    border-radius: 6px 6px 0 0;
-  }
-
-  .gridThree .CardImages {
-    height: 75%;
-    border-radius: 6px 6px 0 0;
-  }
-
-  .gridThree .CardImages img {
-    border-radius: 6px 6px 0 0;
-  }
-
-  .gridFour .CardImages {
-    height: 73%;
-    border-radius: 5px 5px 0 0;
-  }
-
-  .CardTitle {
-    height: 25%;
-  }
-
-  .gridThree .CardText h2 {
-    font-size: 18px;
-  }
-
-  .gridFour .CardText h2 {
-    font-size: 16px;
-  }
-
-  .gridTwo .CardTag button {
-    font-size: 14px;
-  }
-
-  .gridThree .CardTag button {
-    font-size: 13px;
-  }
-
-  .gridFour .CardTag button {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .navContainer {
-    margin: 0 30px;
-  }
-
-  .containerContent {
-    margin: 0 30px;
-  }
-
-  .topContent {
-    font-size: 17px;
-  }
-
-  .gridSet {
-    width: 120px;
-  }
-
-  .gridSet .grid2 {
-    width: 32px;
-    height: 32px;
-    margin-right: 5px;
-  }
-
-  .gridSet .grid3 {
-    width: 32px;
-    height: 32px;
-    margin-right: 5px;
-  }
-
-  .gridSet .grid4 {
-    width: 32px;
-    height: 32px;
-    margin-right: 5px;
-  }
-
-  .gridTwo {
-    grid-template-columns: 473px 473px;
-    grid-template-rows: 325px 325px 325px 325px 325px 325px 325px 325px 325px 325px;
-  }
-
-  .gridThree {
-    grid-template-columns: 313px 313px 313px;
-    grid-template-rows: 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px;
-  }
-
-  .gridFour {
-    grid-template-columns: 233px 233px 233px 233px;
-    grid-template-rows: 185px 185px 185px 185px 185px 185px 185px 185px 185px 185px;
-  }
-
-  .gridThree .Card {
-    border-radius: 4px;
-  }
-
-  .gridThre .Card {
-    border-radius: 4px;
-  }
-
-  .gridFour .Card {
-    border-radius: 4px;
-  }
-
-  .gridTwo .CardImages {
-    height: 78%;
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridTwo .CardImages img {
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridThree .CardImages {
-    height: 73%;
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridThree .CardImages img {
-    border-radius: 4px 4px 0 0;
   }
 
   .gridFour .CardImages {
     height: 70%;
-    border-radius: 3px 3px 0 0;
+    border-radius: 4px 4px 0 0;
   }
 
   .gridFour .CardImages img {
-    border-radius: 3px 3px 0 0;
-  }
-
-  .CardTitle {
-    height: 25%;
+    border-radius: 4px 4px 0 0;
   }
 
   .gridFour .CardTitle {
-    height: 28%;
+    height: 30%;
+    border-radius: 0 0 5px 5px;
   }
 
-  .gridTwo .CardText h2 {
-    font-size: 17px;
-  }
-
-  .gridThree .CardText h2 {
-    font-size: 16px;
+  .gridFour .CardText {
+    padding: 0 10px;
+    margin-bottom: 4px;
   }
 
   .gridFour .CardText h2 {
-    font-size: 15px;
-  }
-
-  .gridTwo .CardTag button {
-    font-size: 13px;
-  }
-
-  .gridThree .CardTag button {
-    font-size: 12px;
-    padding: 2px 6px;
-    margin: 3px 3px 10px 3px;
+    font-size: 14px;
   }
 
   .gridFour .CardTag button {
     font-size: 10px;
-    padding: 2px 6px;
+    margin: 2px 3px;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .gridSet {
-    visibility: hidden;
+@media only screen and (max-width: 1024px) {
+  .gridSet .grid4 {
+    display: none;
   }
 
-  nav {
-    height: 50px;
-  }
-
-  .navLeft h1 {
-    font-size: 28px;
-  }
-
-  .navLeft ul {
-    width: 330px;
-    height: 50px;
-  }
-
-  .navLeft ul li {
-    font-size: 18px;
-  }
-
-  .navRight img {
-    width: 40px;
-  }
-
-  .dayCard {
-    height: 25px;
-    font-size: 14px;
-    border-radius: 5px;
-    margin: 5px 5px 0 0;
-    padding: 6px 8px;
-  }
-
-  .gridTwo {
-    grid-template-columns: 350px 350px;
-    grid-template-rows: 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px;
-  }
-
-  .gridThree {
-    grid-template-columns: 350px 350px;
-    grid-template-rows: 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px;
-  }
-
-  .gridFour {
-    grid-template-columns: 350px 350px;
-    grid-template-rows: 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px;
+  .gridTwo .Card {
+    width: 49%;
+    height: 310px;
   }
 
   .gridThree .Card {
-    border-radius: 4px;
-  }
-
-  .gridThre .Card {
-    border-radius: 4px;
+    width: 32.6%;
+    height: 220px;
   }
 
   .gridFour .Card {
-    border-radius: 4px;
-  }
-
-  .gridTwo .CardImages {
-    height: 75%;
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridTwo .CardImages img {
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridThree .CardImages {
-    height: 75%;
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridThree .CardImages img {
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridFour .CardImages {
-    height: 75%;
-    border-radius: 4px 4px 0 0;
-  }
-
-  .CardTitle {
-    height: 25%;
-  }
-
-  .gridTwo .CardText h2 {
-    font-size: 15px;
+    width: 32.6%;
+    height: 220px;
   }
 
   .gridThree .CardText h2 {
-    font-size: 15px;
-  }
-
-  .gridFour .CardText h2 {
-    font-size: 15px;
-  }
-
-  .gridTwo .CardTag button {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .gridThree .CardTag button {
     font-size: 11px;
+    margin: 6px 3px;
+  }
+
+  .gridFour .CardText h2 {
+    font-size: 16px;
   }
 
   .gridFour .CardTag button {
     font-size: 11px;
+    margin: 6px 3px;
   }
 }
 
-@media only screen and (max-width: 425px) {
-  .navComponent {
+@media only screen and (max-width: 979px) {
+  .gridSet .grid4 {
     display: none;
   }
 
-  nav {
-    height: 40px;
+  .gridTwo .Card {
+    width: 49%;
+    height: 300px;
   }
 
-  .navContainer {
-    margin: 0 20px;
+  .gridThree .Card {
+    width: 32.6%;
+    height: 210px;
   }
 
-  .navLeft h1 {
-    font-size: 24px;
+  .gridFour .Card {
+    width: 32.6%;
+    height: 210px;
   }
 
-  .navLeft ul {
-    width: 330px;
-    height: 40px;
+  .gridTwo .CardText h2 {
+    font-size: 18px;
   }
 
-  .navLeft ul li {
-    font-size: 16px;
+  .gridTwo .CardTag button {
+    font-size: 14px;
+    margin: 6px 3px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .gridSet {
+    display: none;
   }
 
-  .navRight img {
-    width: 30px;
+  .gridTwo .Card {
+    width: 49%;
+    height: 230px;
   }
 
-  .containerContent {
-    margin: 0 20px;
+  .gridThree .Card {
+    width: 49%;
+    height: 230px;
+  }
+
+  .gridFour .Card {
+    width: 49%;
+    height: 230px;
+  }
+
+  .gridTwo .CardImages {
+    height: 72%;
+  }
+
+  .gridThree .CardImages {
+    height: 72%;
+  }
+
+  .gridFour .CardImages {
+    height: 72%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .gridSet {
+    display: none;
+  }
+
+  .gridTwo .Card {
+    width: 49%;
+    height: 250px;
+  }
+
+  .gridThree .Card {
+    width: 49%;
+    height: 250px;
+  }
+
+  .gridFour .Card {
+    width: 49%;
+    height: 250px;
+  }
+
+  .gridTwo .CardImages {
+    height: 73%;
+  }
+
+  .gridThree .CardImages {
+    height: 73%;
+  }
+
+  .gridFour .CardImages {
+    height: 73%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .gridTwo .Card {
+    width: 49%;
+    height: 200px;
+  }
+
+  .gridThree .Card {
+    width: 49%;
+    height: 200px;
+  }
+
+  .gridFour .Card {
+    width: 49%;
+    height: 200px;
+  }
+
+  .gridTwo .CardImages {
+    height: 70%;
+  }
+
+  .gridThree .CardImages {
+    height: 70%;
+  }
+
+  .gridFour .CardImages {
+    height: 70%;
+  }
+
+  .gridTwo .CardTag button {
+    margin: 2px 3px;
+  }
+
+  .gridThree .CardTag button {
+    margin: 2px 3px;
+  }
+
+  .gridFour .CardTag button {
+    margin: 2px 3px;
+  }
+}
+
+@media only screen and (max-width: 579px) {
+  .bodyContent {
+    padding-top: 60px;
+  }
+
+  .gridTwo .Card {
+    width: 99%;
+    height: 320px;
+  }
+
+  .gridThree .Card {
+    width: 99%;
+    height: 320px;
+  }
+
+  .gridFour .Card {
+    width: 99%;
+    height: 320px;
+  }
+
+  .gridTwo .CardImages {
+    height: 77%;
+  }
+
+  .gridThree .CardImages {
+    height: 77%;
+  }
+
+  .gridFour .CardImages {
+    height: 77%;
+  }
+
+  .gridTwo .CardText h2 {
+    font-size: 18px;
+  }
+
+  .gridTwo .CardTag button {
+    font-size: 14px;
+    margin: 6px 3px;
+  }
+
+  .gridThree .CardText h2 {
+    font-size: 18px;
+  }
+
+  .gridThree .CardTag button {
+    font-size: 14px;
+    margin: 6px 3px;
+  }
+
+  .gridFour .CardText h2 {
+    font-size: 18px;
+  }
+
+  .gridFour .CardTag button {
+    font-size: 14px;
+    margin: 6px 3px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .bodyContent {
+    padding-top: 40px;
   }
 
   .Card:hover {
     transform: scale(1);
   }
 
-  .topContent {
-    font-size: 16px;
+  .containerContent {
+    margin: 0 30px;
   }
 
-  .dayCard {
-    height: 23px;
-    font-size: 13px;
-    border-radius: 5px;
-    margin: 5px 5px 0 0;
-    padding: 5px 7px;
-  }
-
-  .gridTwo {
-    grid-template-columns: 384px;
-    grid-template-rows: 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px;
-  }
-
-  .gridThree {
-    grid-template-columns: 384px;
-    grid-template-rows: 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px;
-  }
-
-  .gridFour {
-    grid-template-columns: 384px;
-    grid-template-rows: 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px 235px;
+  .gridTwo .Card {
+    width: 99%;
+    height: 300px;
   }
 
   .gridThree .Card {
-    border-radius: 4px;
-  }
-
-  .gridThre .Card {
-    border-radius: 4px;
+    width: 99%;
+    height: 300px;
   }
 
   .gridFour .Card {
-    border-radius: 4px;
+    width: 99%;
+    height: 300px;
   }
 
   .gridTwo .CardImages {
-    height: 75%;
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridTwo .CardImages img {
-    border-radius: 4px 4px 0 0;
+    height: 76%;
   }
 
   .gridThree .CardImages {
-    height: 75%;
-    border-radius: 4px 4px 0 0;
-  }
-
-  .gridThree .CardImages img {
-    border-radius: 4px 4px 0 0;
+    height: 76%;
   }
 
   .gridFour .CardImages {
-    height: 75%;
-    border-radius: 4px 4px 0 0;
+    height: 76%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .containerContent {
+    margin: 0 20px;
   }
 
-  .CardTitle {
-    height: 25%;
+  .gridTwo .Card {
+    width: 99%;
+    height: 270px;
+  }
+
+  .gridThree .Card {
+    width: 99%;
+    height: 270px;
+  }
+
+  .gridFour .Card {
+    width: 99%;
+    height: 270px;
   }
 
   .gridTwo .CardText h2 {
-    font-size: 15px;
-  }
-
-  .gridThree .CardText h2 {
-    font-size: 15px;
-  }
-
-  .gridFour .CardText h2 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .gridTwo .CardTag button {
-    font-size: 11px;
+    font-size: 12px;
+    margin: 4px 3px;
+  }
+
+  .gridThree .CardText h2 {
+    font-size: 16px;
   }
 
   .gridThree .CardTag button {
-    font-size: 11px;
+    font-size: 12px;
+    margin: 4px 3px;
+  }
+
+  .gridFour .CardText h2 {
+    font-size: 16px;
   }
 
   .gridFour .CardTag button {
-    font-size: 11px;
+    font-size: 12px;
+    margin: 4px 3px;
   }
 }
 
-@media only screen and (max-width: 375px) {
-  .topContent {
-    font-size: 14px;
+@media only screen and (max-width: 425px) {
+  .gridTwo .Card {
+    width: 99%;
+    height: 240px;
   }
 
-  .gridTwo {
-    grid-template-columns: 334px;
-    grid-template-rows: 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px;
+  .gridThree .Card {
+    width: 99%;
+    height: 240px;
   }
 
-  .gridThree {
-    grid-template-columns: 334px;
-    grid-template-rows: 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px;
+  .gridFour .Card {
+    width: 99%;
+    height: 240px;
   }
 
-  .gridFour {
-    grid-template-columns: 334px;
-    grid-template-rows: 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px;
+  .gridTwo .CardImages {
+    height: 73%;
+  }
+
+  .gridThree .CardImages {
+    height: 73%;
+  }
+
+  .gridFour .CardImages {
+    height: 73%;
   }
 }
 
-@media only screen and (max-width: 320px) {
-  .gridTwo {
-    grid-template-columns: 280px;
-    grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px;
+@media only screen and (max-width: 340px) {
+  .containerContent {
+    margin: 0 10px;
   }
 
-  .gridThree {
-    grid-template-columns: 280px;
-    grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px;
+  .gridTwo .Card {
+    width: 99%;
+    height: 230px;
   }
 
-  .gridFour {
-    grid-template-columns: 280px;
-    grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px;
+  .gridThree .Card {
+    width: 99%;
+    height: 230px;
+  }
+
+  .gridFour .Card {
+    width: 99%;
+    height: 230px;
+  }
+
+  .gridTwo .CardImages {
+    height: 72%;
+  }
+
+  .gridThree .CardImages {
+    height: 72%;
+  }
+
+  .gridFour .CardImages {
+    height: 72%;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  .containerContent {
+    margin: 0 10px;
+  }
+
+  .gridTwo .Card {
+    width: 99%;
+    height: 220px;
+  }
+
+  .gridThree .Card {
+    width: 99%;
+    height: 220px;
+  }
+
+  .gridFour .Card {
+    width: 99%;
+    height: 220px;
+  }
+
+  .gridTwo .CardImages {
+    height: 71%;
+  }
+
+  .gridThree .CardImages {
+    height: 71%;
+  }
+
+  .gridFour .CardImages {
+    height: 71%;
   }
 }
