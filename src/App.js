@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./Style/Style.css"
 import "./Style/DayStyle.css"
 import "./Style/Month.css"
+import "./Style/NaviBar.css"
 import HomePage from "Pages/HomePage";
 import DayPage from "Pages/DayPage";
 import MonthPage from "Pages/MonthPage";
