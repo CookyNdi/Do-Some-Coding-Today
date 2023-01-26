@@ -15,6 +15,7 @@ const Body = () => {
   const [datas, setData] = useState([]);
   useEffect(() => {
     document.title = `Do Some Coding Today | Home`;
+    localStorage.setItem("gridThree", "Active")
     db();
   }, []);
 
