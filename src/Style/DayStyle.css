@@ -1,0 +1,497 @@
+:root {
+  --Color1: #1e2029;
+  --Color2: #252733;
+  --Color3: #6e7187;
+  --Color4: #ffffff;
+  --Color5: #f0f0f0;
+  --Color6: rgba(30, 32, 41, 0.9);
+  --Color7: rgba(255, 255, 255, 0.2);
+  --Color8: #2e303e;
+  --Color9: #363949;
+  --Color10: #7f8296;
+  --Color11: #252732;
+}
+
+
+.BodyDay {
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+  background-color: var(--Color1);
+  padding-top: 70px;
+}
+
+.ContainerDay {
+  margin: 0 40px;
+}
+
+.DayTitle {
+  width: 100%;
+  height: auto;
+}
+
+.DayTitle h1 {
+  color: var(--Color10);
+}
+
+.BannerDay {
+  width: 100%;
+  height: 470px;
+  margin-top: 15px;
+  background-color: var(--Color2);
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--Color2);
+}
+
+.BannerDay img {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 20px 20px;
+}
+
+.BannerDay .DescBanner {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Color3);
+  background-color: var(--Color2);
+}
+
+.BannerDay .DescBanner .viewPageDay {
+  width: auto;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BannerDay .DescBanner .DayPosted {
+  width: auto;
+  height: 100%;
+  padding: 0 20px 0 10px;
+  background-color: var(--Color8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.6px;
+}
+
+.iconDayPosted {
+  color: var(--Color3);
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.ContentDay {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-areas: "Left Right";
+  grid-template-columns: 2.6fr 0.8fr;
+  grid-template-rows: 13fr;
+}
+
+.RightContentDay {
+  grid-area: Right;
+}
+
+.btnGithub {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btnGithub:hover {
+  transform: scale(1.05);
+}
+
+.TitleBtn {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  color: var(--Color10);
+  background-color: var(--Color9);
+}
+
+.TitleBtn h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.IconBtn {
+  background-color: var(--Color8);
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.icon {
+  font-size: 30px;
+  color: var(--Color10);
+}
+
+.iconUser {
+  font-size: 22px;
+  color: var(--Color10);
+}
+
+.btnDownload {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btnDownload:hover {
+  transform: scale(1.05);
+}
+
+.containerCreator {
+  width: 100%;
+  height: auto;
+  background-color: var(--Color11);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+}
+
+.containerTag {
+  width: 100%;
+  height: auto;
+  background-color: var(--Color11);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+}
+
+.btnCreator {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.btnTag {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.Creator {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 5px 8px;
+  background-color: var(--Color8);
+  color: var(--Color10);
+  cursor: pointer;
+}
+
+.Creator:hover {
+  opacity: .9;
+  transform: scale(1.05);
+}
+
+.Tag {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  margin-top: 4px;
+  background-color: var(--Color8);
+  color: var(--Color10);
+  cursor: pointer;
+}
+
+.Tag:hover {
+  opacity: .9;
+  transform: scale(1.05);
+}
+
+.LeftContentDay {
+  grid-area: Left;
+  padding-right: 10px;
+}
+
+.LeftContentDayDesc {
+  width: 100%;
+  height: auto;
+  background-color: var(--Color2);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  padding-bottom: 10px;
+}
+
+.LeftContentDayImg {
+  width: 100%;
+  height: 540px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--Color2);
+}
+
+.LeftContentDayImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.TitleDesc {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.TitleDesc .iconDesc {
+  font-size: 25px;
+  color: var(--Color10);
+}
+
+.TitleDesc h2 {
+  color: var(--Color10);
+  font-size: 18px;
+}
+
+.subTitleDesc {
+  background-color: var(--Color8);
+  color: var(--Color10);
+  padding: 4px 10px;
+  border-radius: 8px;
+  letter-spacing: .6px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .LeftContentDayImg {
+    height: 380px;
+  }
+
+  .TitleBtn {
+    width: 80%;
+  }
+
+  .IconBtn {
+    width: 20%;
+  }
+
+  .TitleBtn {
+    padding: 10px 10px;
+  }
+
+  .TitleBtn h3 {
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 28px;
+  }
+
+  .iconUser {
+    font-size: 20px;
+  }
+
+  .Creator {
+    font-size: 14px;
+  }
+
+  .Tag {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .ContainerDay {
+    margin: 0 30px;
+  }
+
+  .BannerDay {
+    height: 370px;
+  }
+
+  .LeftContentDayImg {
+    height: 240px;
+    border-radius: 8px;
+  }
+
+  .btnGithub {
+    height: 40px;
+  }
+
+  .btnDownload {
+    height: 40px;
+  }
+
+  .btnCreator {
+    height: 40px;
+  }
+
+  .btnTag {
+    height: 40px;
+  }
+
+  .TitleBtn h3 {
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 25px;
+  }
+
+  .iconUser {
+    font-size: 18px;
+  }
+
+  .Creator {
+    font-size: 13px;
+  }
+
+  .Tag {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .BodyDay {
+    padding-bottom: 50px;
+  }
+
+  .ContentDay {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ContainerDay {
+    margin: 0 20px;
+  }
+
+  .BannerDay {
+    height: 220px;
+  }
+
+  .LeftContentDayImg {
+    height: 220px;
+    border-radius: 8px;
+  }
+
+  .btnGithub {
+    height: 50px;
+  }
+
+  .btnDownload {
+    height: 50px;
+  }
+
+  .btnCreator {
+    height: 50px;
+  }
+
+  .btnTag {
+    height: 50px;
+  }
+
+  .RightContentDay {
+    width: 100%;
+  }
+
+  .btnGithub:hover {
+    transform: scale(1);
+  }
+
+  .btnDownload:hover {
+    transform: scale(1);
+  }
+
+  .TitleBtn {
+    width: 80%;
+  }
+
+  .IconBtn {
+    width: 20%;
+  }
+
+  .TitleBtn h3 {
+    font-size: 18px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  .iconUser {
+    font-size: 22px;
+  }
+
+  .Creator {
+    font-size: 15px;
+  }
+
+  .Tag {
+    font-size: 15px;
+
+  }
+
+  .LeftContentDay {
+    padding: 0;
+  }
+
+}

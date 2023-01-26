@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./style.css";
-import LandingPage from "./Pages/LandingPage";
-import January from "./Pages/January";
-import February from "./Pages/February";
+import "./Style/Style.css"
+import "./Style/DayStyle.css"
+import "./Style/Month.css"
+import HomePage from "Pages/HomePage";
+import DayPage from "Pages/DayPage";
+import MonthPage from "Pages/MonthPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/january" element={<January />} />
-        <Route path="/february" element={<February />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/january/:id" element={<DayPage />} />
+        <Route path="/month" element={<MonthPage />} />
       </Routes>
     </BrowserRouter>
   );
