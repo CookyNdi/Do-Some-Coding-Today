@@ -1,14 +1,14 @@
 import React from "react";
 import NaviBar from "Components/NaviBar";
-import BodyDay from "Components/BodyDay";
+import January from "Components/January";
 
-const DayPage = () => {
+const JanuaryPage = () => {
   return (
     <div>
       <NaviBar />
-      <BodyDay />
+      <January />
     </div>
   );
 };
 
-export default DayPage;
+export default JanuaryPage;

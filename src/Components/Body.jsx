@@ -5,7 +5,7 @@ import spiner from "../asset/spiner.gif";
 const Body = () => {
   const sheetId = "10r-IFwefCFvFDGDc1cSVHwq-P9-RnJ63Vgr2aHoxKw4";
   const baseUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-  const sheetName = "January";
+  const sheetName = "February";
   const qu = "Select *";
   // const qu = "Select * WHERE B = 2";
   const query = encodeURIComponent(qu);
@@ -15,7 +15,7 @@ const Body = () => {
   const [datas, setData] = useState([]);
   useEffect(() => {
     document.title = `Do Some Coding Today | Home`;
-    localStorage.setItem("gridThree", "Active")
+    localStorage.setItem("gridThree", "Active");
     db();
   }, []);
 
@@ -113,7 +113,7 @@ const Body = () => {
         </div>
         <div className="mainContent" id="setGrid">
           {datas.map((data) => (
-            <Link to={`/january/${data.id}`} className="Card" key={data.id}>
+            <Link to={`/february/${data.id}`} className="Card" key={data.id}>
               <div className="containerCard">
                 <div className="dayCard">{data.date}</div>
                 <div className="CardImages">

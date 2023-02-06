@@ -7,12 +7,11 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
 import { AiFillTag } from "react-icons/ai";
 
-const BodyDay = () => {
+const June = () => {
   const { id } = useParams();
   const sheetId = "10r-IFwefCFvFDGDc1cSVHwq-P9-RnJ63Vgr2aHoxKw4";
   const baseUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-  const sheetName = "January";
-  // const qu = "Select *";
+  const sheetName = "June";
   const qu = `Select * WHERE A = ${id}`;
   const query = encodeURIComponent(qu);
   const url = `${baseUrl}&sheet=${sheetName}&tq=${query}`;
@@ -30,7 +29,6 @@ const BodyDay = () => {
       .then((res) => res.text())
       .then((rep) => {
         const jsData = JSON.parse(rep.substr(47).slice(0, -2));
-        // console.log(jsData);
         const colz = [];
         jsData.table.cols.forEach((heading) => {
           if (heading.label) {
@@ -47,8 +45,6 @@ const BodyDay = () => {
         setDataById(data);
       });
   };
-
-  // console.log(datasById);
 
   const github = datasById.github;
   const githubZip = datasById.gitzip;
@@ -146,4 +142,4 @@ const BodyDay = () => {
   );
 };
 
-export default BodyDay;
+export default June;
