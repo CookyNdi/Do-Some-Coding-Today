@@ -46,20 +46,19 @@ const January = () => {
       });
   };
 
-  const github = datasById.github;
-  const githubZip = datasById.gitzip;
-
   const toGithub = () => {
+    const github = datasById[0].github;
     window.location = github;
   };
   const togithubZip = () => {
+    const githubZip = datasById[0].githubzip;
     window.location = githubZip;
   };
 
   return (
     <div>
       {datasById.map((data) => (
-        <section className="BodyDay" key={data.id}>
+        <section className="BodyDay" key={data.date}>
           <div className="ContainerDay">
             <div className="DayTitle">
               <h1>{data.title}</h1>
